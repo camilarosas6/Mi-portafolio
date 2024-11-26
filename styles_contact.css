@@ -1,0 +1,77 @@
+nav {
+    background-color: #d85391;
+    padding: 24px;
+    text-align: left;
+    top: 0;
+    width: 100%;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 2px;
+    font-size: 1.2em;
+    background-color: #d85391;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover {
+    background-color: white;
+    color: #d85391;
+}
+/* Estilo de la página completa */
+body {
+    background-color: #d089aa;
+    margin: 0;
+    text-align: center; /* Centra todo el texto */
+    font-family: Arial, sans-serif;
+}
+main {
+    background-color: #d089aa;
+    padding: 20px;
+}
+/* Imagen circular con mi cara */
+.circular-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ty {
+    color: white;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+/* Imagen adicional */
+.img img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+.MIAT {
+    color: white;
+}
+/* Íconos de redes sociales */
+.socials {
+    margin-top: 20px;
+}
+.socials a {
+    margin: 0 15px;
+    display: inline-block;
+    text-decoration: none;
+}
+.socials img {
+    max-width: 60px;
+    height: auto;
+    border-radius: 60%;
+}
