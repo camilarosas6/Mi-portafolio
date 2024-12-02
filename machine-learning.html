@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teachable Machine Image Model</title>
+  <title>Teachable Machine Model</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Teachable Machine Image Model</h1>
-    <button type="button" onclick="init()">Start</button>
-    <div id="webcam-container"></div>
-    <div id="label-container"></div>
-    <div class="output-section">
-      <h3>Output</h3>
-      <!-- Labels will dynamically populate here -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <span class="nav-link title">Machine Learning</span>
+        </ul>
+    </nav>
+    <div class="container">
+        <button type="button" onclick="init()">Start</button>
+        <div id="webcam-container"></div>
+        <div id="label-container"></div>
+        <div class="output-section">
+          <h3>Output</h3>
+          <!-- Labels will dynamically populate here -->
+        </div>
     </div>
-  </div>
 
-  <!-- TensorFlow and Teachable Machine Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-  <script src="script.js"></script>
+    <!-- TensorFlow and Teachable Machine Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
