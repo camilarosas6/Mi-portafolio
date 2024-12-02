@@ -23,9 +23,6 @@ async function init() {
   document.getElementById("webcam-container").appendChild(webcam.canvas);
   labelContainer = document.getElementById("label-container");
   labelContainer.innerHTML = ""; // Clear any previous labels
-  for (let i = 0; i < maxPredictions; i++) {
-    labelContainer.appendChild(document.createElement("div"));
-  }
 }
 
 // Webcam loop
@@ -41,22 +38,16 @@ async function predict() {
   const outputSection = document.querySelector(".output-section");
 
   // Clear current outputs
-  outputSection.innerHTML = `<h3>Output</h3>`;
+  outputSection.innerHTML = `<h3>Predictions</h3>`;
 
-  for (let i = 0; i < maxPredictions; i++) {
-    const className = prediction[i].className;
-    const probability = (prediction[i].probability * 100).toFixed(2);
-
-    // Update label container
-    labelContainer.childNodes[i].innerHTML = `${className}: ${probability}%`;
-
-    // Create dynamic output bar
+  prediction.forEach(({ className, probability }) => {
+    const probabilityPercent = (probability * 100).toFixed(2);
     const progressBar = `
       <div class="output-item">
         <span class="label">${className}</span>
-        <div class="progress-bar" style="--progress: ${probability};"></div>
+        <div class="progress-bar" style="--progress: ${probabilityPercent};"></div>
       </div>
     `;
     outputSection.innerHTML += progressBar;
-  }
+  });
 }
